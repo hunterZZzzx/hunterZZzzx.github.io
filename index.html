@@ -1,55 +1,391 @@
-
 <!DOCTYPE html>
-<html>
-    <head>
-        <title >
-            CosecAI
-      </title>
-      <link rel="stylesheet" type="text/css" href="style_index.css">
-      <link rel="icon" type="image/x-icon" href="Images/hacker.png">
-	<link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet"> 
-<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    </head>
-  <body>
-    <div class="header">
-      <div class="container">
-        <div class="navbar">
-          <div class="logo">
-            <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg" stroke-width="1.5" class="h-6 w-6" role="img"><title>ChatGPT</title><text x="-9999" y="-9999">ChatGPT</text><path d="M37.5324 16.8707C37.9808 15.5241 38.1363 14.0974 37.9886 12.6859C37.8409 11.2744 37.3934 9.91076 36.676 8.68622C35.6126 6.83404 33.9882 5.3676 32.0373 4.4985C30.0864 3.62941 27.9098 3.40259 25.8215 3.85078C24.8796 2.7893 23.7219 1.94125 22.4257 1.36341C21.1295 0.785575 19.7249 0.491269 18.3058 0.500197C16.1708 0.495044 14.0893 1.16803 12.3614 2.42214C10.6335 3.67624 9.34853 5.44666 8.6917 7.47815C7.30085 7.76286 5.98686 8.3414 4.8377 9.17505C3.68854 10.0087 2.73073 11.0782 2.02839 12.312C0.956464 14.1591 0.498905 16.2988 0.721698 18.4228C0.944492 20.5467 1.83612 22.5449 3.268 24.1293C2.81966 25.4759 2.66413 26.9026 2.81182 28.3141C2.95951 29.7256 3.40701 31.0892 4.12437 32.3138C5.18791 34.1659 6.8123 35.6322 8.76321 36.5013C10.7141 37.3704 12.8907 37.5973 14.9789 37.1492C15.9208 38.2107 17.0786 39.0587 18.3747 39.6366C19.6709 40.2144 21.0755 40.5087 22.4946 40.4998C24.6307 40.5054 26.7133 39.8321 28.4418 38.5772C30.1704 37.3223 31.4556 35.5506 32.1119 33.5179C33.5027 33.2332 34.8167 32.6547 35.9659 31.821C37.115 30.9874 38.0728 29.9178 38.7752 28.684C39.8458 26.8371 40.3023 24.6979 40.0789 22.5748C39.8556 20.4517 38.9639 18.4544 37.5324 16.8707ZM22.4978 37.8849C20.7443 37.8874 19.0459 37.2733 17.6994 36.1501C17.7601 36.117 17.8666 36.0586 17.936 36.0161L25.9004 31.4156C26.1003 31.3019 26.2663 31.137 26.3813 30.9378C26.4964 30.7386 26.5563 30.5124 26.5549 30.2825V19.0542L29.9213 20.998C29.9389 21.0068 29.9541 21.0198 29.9656 21.0359C29.977 21.052 29.9842 21.0707 29.9867 21.0902V30.3889C29.9842 32.375 29.1946 34.2791 27.7909 35.6841C26.3872 37.0892 24.4838 37.8806 22.4978 37.8849ZM6.39227 31.0064C5.51397 29.4888 5.19742 27.7107 5.49804 25.9832C5.55718 26.0187 5.66048 26.0818 5.73461 26.1244L13.699 30.7248C13.8975 30.8408 14.1233 30.902 14.3532 30.902C14.583 30.902 14.8088 30.8408 15.0073 30.7248L24.731 25.1103V28.9979C24.7321 29.0177 24.7283 29.0376 24.7199 29.0556C24.7115 29.0736 24.6988 29.0893 24.6829 29.1012L16.6317 33.7497C14.9096 34.7416 12.8643 35.0097 10.9447 34.4954C9.02506 33.9811 7.38785 32.7263 6.39227 31.0064ZM4.29707 13.6194C5.17156 12.0998 6.55279 10.9364 8.19885 10.3327C8.19885 10.4013 8.19491 10.5228 8.19491 10.6071V19.808C8.19351 20.0378 8.25334 20.2638 8.36823 20.4629C8.48312 20.6619 8.64893 20.8267 8.84863 20.9404L18.5723 26.5542L15.206 28.4979C15.1894 28.5089 15.1703 28.5155 15.1505 28.5173C15.1307 28.5191 15.1107 28.516 15.0924 28.5082L7.04046 23.8557C5.32135 22.8601 4.06716 21.2235 3.55289 19.3046C3.03862 17.3858 3.30624 15.3413 4.29707 13.6194ZM31.955 20.0556L22.2312 14.4411L25.5976 12.4981C25.6142 12.4872 25.6333 12.4805 25.6531 12.4787C25.6729 12.4769 25.6928 12.4801 25.7111 12.4879L33.7631 17.1364C34.9967 17.849 36.0017 18.8982 36.6606 20.1613C37.3194 21.4244 37.6047 22.849 37.4832 24.2684C37.3617 25.6878 36.8382 27.0432 35.9743 28.1759C35.1103 29.3086 33.9415 30.1717 32.6047 30.6641C32.6047 30.5947 32.6047 30.4733 32.6047 30.3889V21.188C32.6066 20.9586 32.5474 20.7328 32.4332 20.5338C32.319 20.3348 32.154 20.1698 31.955 20.0556ZM35.3055 15.0128C35.2464 14.9765 35.1431 14.9142 35.069 14.8717L27.1045 10.2712C26.906 10.1554 26.6803 10.0943 26.4504 10.0943C26.2206 10.0943 25.9948 10.1554 25.7963 10.2712L16.0726 15.8858V11.9982C16.0715 11.9783 16.0753 11.9585 16.0837 11.9405C16.0921 11.9225 16.1048 11.9068 16.1207 11.8949L24.1719 7.25025C25.4053 6.53903 26.8158 6.19376 28.2383 6.25482C29.6608 6.31589 31.0364 6.78077 32.2044 7.59508C33.3723 8.40939 34.2842 9.53945 34.8334 10.8531C35.3826 12.1667 35.5464 13.6095 35.3055 15.0128ZM14.2424 21.9419L10.8752 19.9981C10.8576 19.9893 10.8423 19.9763 10.8309 19.9602C10.8195 19.9441 10.8122 19.9254 10.8098 19.9058V10.6071C10.8107 9.18295 11.2173 7.78848 11.9819 6.58696C12.7466 5.38544 13.8377 4.42659 15.1275 3.82264C16.4173 3.21869 17.8524 2.99464 19.2649 3.1767C20.6775 3.35876 22.0089 3.93941 23.1034 4.85067C23.0427 4.88379 22.937 4.94215 22.8668 4.98473L14.9024 9.58517C14.7025 9.69878 14.5366 9.86356 14.4215 10.0626C14.3065 10.2616 14.2466 10.4877 14.2479 10.7175L14.2424 21.9419ZM16.071 17.9991L20.4018 15.4978L24.7325 17.9975V22.9985L20.4018 25.4983L16.071 22.9985V17.9991Z" fill="currentColor"></path></svg>
-    <nav>
-			<ul>
-				<li><a href="">Home</a></li>
-				<li><a href="">Products</a></li>
-				<li><a href="">About</a></li>
-				<li><a href="">Account</a></li>
+<html lang="en">
 
-			</ul>
-		</nav>
-    
-  <h1><P>Hello Friend<br>This WebSite Running To Help You IF Need anything write us </P></h1>
-  <a href="" class="btn">Buy Now &#8594;</a>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CosecAI</title>
+  <link rel="shortcut icon" href="./assets/imgs/Social-icon/ai.png">
+  <!-- ========== Include FontAwesome Library ========== -->
+  <link rel="stylesheet" href="css/all.min.css">
+  <!-- ========== Render All Elements Normal ========== -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <!-- Animation Library -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <!-- ========== Link CSS File ========== -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <!-- ======== Start Preload ======== -->
+  <div class="loading">
+    <div class="load">
+      <div class="loader loader1">
+        <div>
+          <div>
+            <div>
+              <div>
+                <div>
+                  <div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-			<div class="footer-col-4">
-						<h3>Follow Us</h3>
-						<ul>
-							<li>Facebook</li>
-							<li>Twitter</li>
-							<li>instagram</li>
-							<li>Youtube</li>
-
-						</ul>
-			</div>
-        
-      <hr>
-        <p class="Copyright">Copyright 2023 - CosecAI, Inc.</p>
-        </div>
-	  </div>
   </div>
+  <!-- ======== End Preload ======== -->
 
+  <!-- ======== Start Header ========-->
+  <header class="header" id="header">
+    <div class="logo">
+      <a href="/">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+              xmlns:svgjs="http://svgjs.dev/svgjs" version="1.1" width="100px" height="70px" viewBox="0 0 1000 472">
+              <?xml version="1.0" encoding="utf-8"?>
+    <!-- Generator: Adobe Illustrator 26.5.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+    <svg version="1.0" id="katman_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+      viewBox="0 0 1190.55 841.89" style="enable-background:new 0 0 1190.55 841.89;" xml:space="preserve">
+    <style type="text/css">
+      .st0{fill:url(#SVGID_1_);}
+      .st1{fill:url(#SVGID_00000168822926608046872590000009041392561466732965_);}
+      .st2{fill:url(#SVGID_00000007397591541055622450000011495031151673534851_);}
+      .st3{fill:url(#SVGID_00000043441715102143116330000012400553383933042096_);}
+    </style>
+    <g id="Page-1">
+      <g id="chip-brain">
+        <g id="Mask">
+        </g>
+        <g id="path-1">
+        </g>
+      </g>
+    </g>
+    <g>
+      <linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="440.8144" y1="554.6589" x2="495.4432" y2="630.6398">
+        <stop  offset="0" style="stop-color:#06A9DB"/>
+        <stop  offset="0.4413" style="stop-color:#6778B9"/>
+        <stop  offset="0.795" style="stop-color:#CD4894"/>
+        <stop  offset="1" style="stop-color:#D64592"/>
+      </linearGradient>
+      <path class="st0" d="M471.26,616.44c-22.86-6.68-36.06-30.86-29.36-53.87l-12.36-3.63c-4.19,14.46-2.58,29.69,4.63,42.92
+        c7.21,13.22,19.13,22.82,33.48,27.03c5.22,1.56,10.5,2.27,15.78,2.27c15.2,0,29.94-6.22,40.7-17.83l-9.34-8.88
+        C503.58,616.44,486.9,621.04,471.26,616.44z"/>
+      
+        <linearGradient id="SVGID_00000093148669188301657120000014046232007605686402_" gradientUnits="userSpaceOnUse" x1="360.3618" y1="238.9146" x2="632.0974" y2="616.86">
+        <stop  offset="0" style="stop-color:#06A9DB"/>
+        <stop  offset="0.4413" style="stop-color:#6778B9"/>
+        <stop  offset="0.795" style="stop-color:#CD4894"/>
+        <stop  offset="1" style="stop-color:#D64592"/>
+      </linearGradient>
+      <path style="fill:url(#SVGID_00000093148669188301657120000014046232007605686402_);" d="M510.15,130.5
+        c-35.22,0-64.84,22.43-72.63,54.13c-42.11,0.46-76.24,35.07-76.24,77.6v1.62C338.29,282,324.64,310,324.64,339.44
+        c0,8.56,2.25,19.71,4.51,28.07c-28.2,27.29-32.32,72.35-9.08,104.5c2.77,3.82,5.92,7.26,9.27,10.44
+        c-3.16,10.05-4.7,19.64-4.7,30.47c0,30.66,14.55,59.38,39.02,77.47c3.8,45.57,39.34,82.27,84.54,87.26
+        c14.04,20.62,36.96,32.87,61.94,32.87c34.45,0,64.39-23.47,72.76-56.66c1.61-5.06,2.45-10.31,2.45-15.56V205.89
+        c0-0.97-0.07-1.88-0.13-2.72C583.68,162.39,550.65,130.5,510.15,130.5z M572.48,638.29c0,3.95-0.65,7.84-1.93,11.99
+        c-7.02,27.81-31.87,47.26-60.4,47.26c-21.57,0-41.34-11.02-52.86-29.5l-1.67-2.79l-3.28-0.26c-41.27-3.11-73.92-36.89-76.04-78.44
+        l-0.13-3.24l-2.64-1.81c-22.54-15.49-35.99-41.17-35.99-68.59c0-8.82,1.16-15.88,2.64-21.65c13.2,8.88,28.53,13.48,43.91,13.48
+        c13.78,0,27.62-3.63,39.99-10.95c3.41,3.43,7.15,6.55,11.33,9.14c9.53,5.83,20.15,8.69,30.84,8.69c10.69,0,21.44-2.92,31.04-8.88
+        l-6.76-11.02c-14.87,9.27-33.48,9.27-48.42,0.13c-10.56-6.48-17.97-16.73-20.86-28.85c-2.9-12.06-0.96-24.57,5.47-35.2l-11.01-6.74
+        c-8.24,13.55-10.69,29.56-6.95,45.05c1.48,6.22,3.99,12.06,7.27,17.37c-24.02,13.29-54.02,10.44-75.14-7.84
+        c-3.86-3.31-7.34-7.07-10.37-11.28c-20.22-27.88-15.78-67.35,10.11-89.85l3.16-2.79l-1.22-4.02c-2.38-8.04-5.02-20.29-5.02-28.26
+        c0-26.51,12.75-51.6,34.12-67.23l2.9-2.07l-0.26-3.63c-0.13-1.43-0.13-2.79-0.13-4.28c0-35.65,28.78-64.7,64.2-64.7
+        c1.35,0,2.71,0.07,3.99,0.13c30.91,1.94,55.89,25.8,59.75,56.4c-15.84,8.75-27.3,22.88-33.23,39.02
+        c-18.29-0.13-35.67,6.48-49.32,18.93c-14.55,13.16-23.12,31.31-24.15,50.95l12.88,0.71c0.84-16.27,7.86-31.18,19.83-42.07
+        c10.43-9.4,23.51-14.78,37.28-15.49c-2.25,13.03-1.1,26.9,4.12,40l11.98-4.8c-11.85-29.82,1.35-63.92,30.2-77.66l3.93-1.88
+        l-0.26-4.34c-2.25-36.5-29.49-66.19-64.71-71.83c7.21-24.44,31.55-42.14,59.5-42.14c33.55,0,60.91,26.45,62.27,60.35
+        c0,0.71,0.07,1.36,0.07,2.07V638.29z"/>
+      
+        <linearGradient id="SVGID_00000160163662626500182930000003978224392162923163_" gradientUnits="userSpaceOnUse" x1="709.8401" y1="581.5004" x2="737.3153" y2="619.7145">
+        <stop  offset="0" style="stop-color:#06A9DB"/>
+        <stop  offset="0.4413" style="stop-color:#6778B9"/>
+        <stop  offset="0.795" style="stop-color:#CD4894"/>
+        <stop  offset="1" style="stop-color:#D64592"/>
+      </linearGradient>
+      <path style="fill:url(#SVGID_00000160163662626500182930000003978224392162923163_);" d="M665.84,613.33
+        c10.82,11.6,25.56,17.83,40.76,17.83c5.22,0,10.56-0.71,15.78-2.27c14.36-4.21,26.27-13.81,33.42-27.03
+        c7.21-13.23,8.89-28.46,4.7-42.92l-12.36,3.63c3.22,11.15,1.93,22.88-3.61,33.06c-5.54,10.18-14.68,17.57-25.75,20.81
+        c-15.65,4.6-32.33,0-43.53-11.99L665.84,613.33z"/>
+      
+        <linearGradient id="SVGID_00000012470157376775093660000001586347535741224365_" gradientUnits="userSpaceOnUse" x1="554.4435" y1="222.562" x2="829.8831" y2="605.6592">
+        <stop  offset="0" style="stop-color:#06A9DB"/>
+        <stop  offset="0.4413" style="stop-color:#6778B9"/>
+        <stop  offset="0.795" style="stop-color:#CD4894"/>
+        <stop  offset="1" style="stop-color:#D64592"/>
+      </linearGradient>
+      <path style="fill:url(#SVGID_00000012470157376775093660000001586347535741224365_);" d="M869.9,472
+        c23.31-32.15,19.12-77.21-9.01-104.5c2.25-8.36,4.44-19.51,4.44-28.07c0-29.43-13.59-57.44-36.57-75.59v-1.62
+        c0-42.52-34.13-77.14-76.3-77.6c-7.73-31.7-37.35-54.13-72.57-54.13c-40.56,0-73.53,31.9-75.14,72.61
+        c-0.06,0.91-0.06,1.82-0.06,2.79v432.39c0,5.25,0.84,10.5,2.32,15.17c8.44,33.58,38.44,57.05,72.89,57.05
+        c24.98,0,47.91-12.25,61.95-32.87c45.14-4.99,80.75-41.68,84.54-87.26c24.47-18.09,38.96-46.8,38.96-77.47
+        c0-10.83-1.48-20.42-4.64-30.47C863.97,479.27,867.19,475.83,869.9,472z M859.53,464.36c-3.03,4.21-6.57,7.97-10.37,11.35
+        c-21.12,18.22-51.12,21.07-75.14,7.78c3.28-5.32,5.8-11.15,7.28-17.37c3.74-15.49,1.22-31.51-6.95-45.05l-11.01,6.74
+        c6.44,10.63,8.37,23.14,5.47,35.2c-2.96,12.12-10.37,22.36-20.93,28.85c-14.94,9.14-33.48,9.14-48.36-0.13l-6.76,11.02
+        c9.53,5.96,20.28,8.88,31.04,8.88c10.62,0,21.31-2.85,30.78-8.69c4.25-2.59,7.98-5.71,11.33-9.14
+        c12.43,7.33,26.21,10.95,40.05,10.95c15.39,0,30.71-4.6,43.91-13.48c1.48,5.77,2.58,12.84,2.58,21.65
+        c0,27.42-13.46,53.09-35.93,68.59l-2.64,1.81l-0.19,3.24c-2.06,41.55-34.77,75.33-76.04,78.44l-3.22,0.26l-1.74,2.79
+        c-11.46,18.47-31.23,29.5-52.8,29.5c-28.59,0-53.38-19.45-60.52-47.65c-1.16-3.76-1.8-7.65-1.8-11.6V205.89c0-0.71,0-1.42,0.06-2.2
+        c1.35-33.77,28.65-60.22,62.27-60.22c27.88,0,52.29,17.7,59.5,42.14c-35.22,5.64-62.46,35.33-64.71,71.83l-0.26,4.34l3.93,1.88
+        c28.78,13.74,42.04,47.84,30.2,77.66l11.91,4.8c5.28-13.09,6.44-26.97,4.18-40.06c13.78,0.78,26.85,6.16,37.22,15.56
+        c11.97,10.89,19.06,25.8,19.9,42.07l12.88-0.71c-1.03-19.64-9.59-37.79-24.15-50.95c-13.65-12.45-31.04-19.06-49.32-18.93
+        c-5.92-16.14-17.38-30.27-33.23-39.02c3.8-30.6,28.85-54.46,59.75-56.4c1.29-0.06,2.64-0.13,3.93-0.13
+        c35.41,0,64.26,29.04,64.26,64.7c0,1.49-0.39,7.91-0.39,7.91l2.9,2.07c21.31,15.62,34.06,40.71,34.06,67.23
+        c0,7.97-2.58,20.22-5.02,28.26l-1.22,4.02l3.22,2.79C875.24,397,879.68,436.48,859.53,464.36z"/>
+    </g>
+</svg>
+
+            </svg></g>
+        </svg>
+      </a>
+    </div>
+    <nav class="large-nav">
+      <ul class="ul-nav">
+        <li class="nav-list"><a class="nav-link" data-section=".home" href="#">Home</a></li>
+        <li class="nav-list"><a class="nav-link" data-section=".about" href="#">About</a></li>
+        <li class="nav-list"><a class="nav-link" data-section=".tools" href="#">Tools</a></li>
+      </ul>
+    </nav>
+    <a class="contact" href="contact.html">
+      <button class="c-button">
+        Contact
+        <div data-section=".footer" class="c-button__blobs">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </button>
+      <svg style="display: block; height: 0; width: 0" version="1.1" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <filter id="goo">
+            <feGaussianBlur result="blur" stdDeviation="10" in="SourceGraphic"></feGaussianBlur>
+            <feColorMatrix result="goo" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" mode="matrix" in="blur">
+            </feColorMatrix>
+            <feBlend in2="goo" in="SourceGraphic"></feBlend>
+          </filter>
+        </defs>
+      </svg>
+    </a>
+
+    <!-- Start Toggle Icon Nav Menu -->
+    <div class="menu-icon">
+      <span class="up"></span>
+      <span class="middle"></span>
+      <span class="bottom"></span>
+    </div>
+    <!-- End Toggle Icon Nav Menu -->
+
+    <!-- Start Nav In Phone & Medium Screens -->
+    <nav class="phone-nav" id="phone-nav">
+      <ul class="phone-nav-ul">
+        <li class="phone-nav-li"><a class="phone-link" data-section=".home" href="#">Home</a></li>
+        <li class="phone-nav-li"><a class="phone-link" data-section=".about" href="#">About</a></li>
+        <li class="phone-nav-li"><a class="phone-link" data-section=".tools" href="#">Tools</a></li>
+      </ul>
+      <div class="social-contact">
+        <div class="facebook">
+          <a class="social-link" href="https://www.facebook.com" target="_blank">
+            <img src="./assets/imgs/Social-icon/facebook.png" alt="facebook">
+          </a>
+        </div>
+
+        <div class="whats">
+          <a class="social-link" href="https://wa.me/" target="_blank">
+            <img src="./assets/imgs/Social-icon/whatsapp.png" alt="whatsapp">
+          </a>
+        </div>
+
+        <div class="instagram">
+          <a class="social-link" href="https://www.instagram.com/_mahmoudmousa_/" target="_blank">
+            <img src="./assets/imgs/Social-icon/instagram.png" alt="instagram">
+          </a>
+        </div>
+
+        <div class="gmail">
+          <a class="social-link" href="mailto:" target="_blank">
+            <img src="./assets/imgs/Social-icon/gmail.png" alt="gmail">
+          </a>
+        </div>
+
+        <div class="linkedin">
+          <a class="social-link" href="https://www.linkedin.com/" target="_blank">
+            <img src="./assets/imgs/Social-icon/linkedin.png" alt="linkedin">
+          </a>
+        </div>
+
+        <div class="github">
+          <a class="social-link" href="https://github.com/ANBU-Hunter" target="_blank">
+            <img src="./assets/imgs/Social-icon/github-svgrepo.svg" alt="github">
+          </a>
+        </div>
+
+        <div class="youtube">
+          <a class="social-link" href="/">
+            <img src="./assets/imgs/Social-icon/youtube.png" alt="youtube">
+          </a>
+        </div>
+
+        <div class="codepen">
+          <a class="social-link" href="https://codepen.io/" target="_blank">
+            <img src="./assets/imgs/Social-icon/codepen.png" alt="codepen">
+          </a>
+        </div>
+
+        <div class="twitter">
+          <a class="social-link" href="https://twitter.com/Mahm0udZzz" target="_blank">
+            <img src="./assets/imgs/Social-icon/twitter.png" alt="twitter">
+          </a>
+        </div>
+      </div>
+    </nav>
+    <!-- End Nav In Phone & Medium Screens -->
+  </header>
+  <!-- ======== End Header ========-->
+  <!-- ======== Start Home Section ========-->
+  <section class="home main-section" id="home">
+    <div class="light-1"></div>
+    <div class="container">
+      <div class="ball-1"></div>
+      <div class="ball-2"></div>
+      <div class="ball-3"></div>
+      <div class="home-content">
+        <div class="left-section">
+          <h3 class="welcome">Hi, WE Are CosecAI</h3>
+          <h2>I'm a
+            <span class="typed"></span>
+          </h2>
+          <p class="brief">Hello Friends, We Are Here To Help For You.</p>
+          <button class="cv-btn">
+            <a class="cv-link" href="./assets/doc/cv/">Download Service</a>
+          </button>
+        </div>
+        <div class="right-section">
+          <!-- <img src="./assets/imgs/robot.png" alt="Pro"> -->
+        </div>
+      </div>
+    </div>
+    <a href="#" class="scroll-button">
+      <div data-section=".about" class="scrolldown">
+        <div class="arrows">
+          <div class="arrow-down"></div>
+          <div class="arrow-down"></div>
+        </div>
+      </div>
+    </a>
+  </section>
+  <!-- ======== End Home Section ========-->
+  <!-- ======== Start About Section ========-->
+  <section class="about main-section" id="about">
+    <div class="light-2"></div>
+    <div class="container">
+
+      <div class="heading">
+        <h3>About</h3>
+      </div>
+      <div class="about-content pt-section-content">
+        <div class="ball-1"></div>
+        <div class="big-ball-1"></div>
+        <div class="ball-4"></div>
+        <div class="about-brief" data-aos="fade-up">
+          <p>We are an AI company aiming to make everything easy For People.</p>
+        </div>
+        
+  </section>
+  <!-- ======== End About Section ========-->
   
-  </body>
+  <!-- ======== End Work Gallery Section ========-->
   
+  
+  
+  <!-- ======== Start Footer ========-->
+  <footer class="footer" id="footer">
+    <div class="light-3"></div>
+
+    <div class="container">
+      <div class="footer-content">
+        <div class="ball-2"></div>
+        <div class="ball-3"></div>
+        <div class="ball-5"></div>
+        <div class="logo">
+          <a href="/">
+            <img src="assets/imgs/Social-icon/ai.png" alt="">
+          </a>
+        </div>
+        <div class="social-contact">
+          <div class="facebook">
+            <a class="social-link" href="https://www.facebook.com/" target="_blank">
+              <img src="./assets/imgs/Social-icon/facebook.png" alt="facebook">
+            </a>
+          </div>
+
+          <div class="whats">
+            <a class="social-link" href="https://wa.me/" target="_blank">
+              <img src="./assets/imgs/Social-icon/whatsapp.png" alt="whatsapp">
+            </a>
+          </div>
+
+          <div class="instagram">
+            <a class="social-link" href="https://www.instagram.com/_mahmoudmousa_/" target="_blank">
+              <img src="./assets/imgs/Social-icon/instagram.png" alt="instagram">
+            </a>
+          </div>
+
+          <div class="gmail">
+            <a class="social-link" href="mailto:" target="_blank">
+              <img src="./assets/imgs/Social-icon/gmail.png" alt="gmail">
+            </a>
+          </div>
+
+          <div class="linkedin">
+            <a class="social-link" href="https://www.linkedin.com/" target="_blank">
+              <img src="./assets/imgs/Social-icon/linkedin.png" alt="linkedin">
+            </a>
+          </div>
+
+          <div class="github">
+            <a class="social-link" href="https://github.com/ANBU-Hunter" target="_blank">
+              <img src="./assets/imgs/Social-icon/github-svgrepo.svg" alt="github">
+            </a>
+          </div>
+
+          <div class="youtube">
+            <a class="social-link" href="/">
+              <img src="./assets/imgs/Social-icon/youtube.png" alt="youtube">
+            </a>
+          </div>
+
+          <div class="codepen">
+            <a class="social-link" href="https://codepen.io/" target="_blank">
+              <img src="./assets/imgs/Social-icon/codepen.png" alt="codepen">
+            </a>
+          </div>
+
+          <div class="twitter">
+            <a class="social-link" href="https://twitter.com/Mahm0udZzz" target="_blank">
+              <img src="./assets/imgs/Social-icon/twitter.png" alt="twitter">
+            </a>
+          </div>
+        </div>
+        <div class="copy-right">
+          <p>CosecAIs INC. 2023</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- ======== End Footer ========-->
+  <!-- ======== Start Scroll To Top ========-->
+  <div class="scroll-top">
+    <i class="fa-solid fa-angle-up angel"></i>
+  </div>
+  <!-- ======== Start Scroll To Top ========-->
+
+</body>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+<script src="js/main.js" type="module"></script>
+
 </html>
-
