@@ -840,7 +840,7 @@ img {
   transition: var(--transition);
   display: inline-block;
 }
-.header .contact {
+.header .contact .login{
   display: flex;
   flex-basis: 120px;
   justify-content: center;
